@@ -3,34 +3,41 @@ let spring = 0.02; //bounciness
 let gravity = 0.0;
 let friction = -1; //wall bounciness
 let balls = [];
+let healThreshold = 0;//3.5; //number of seconds before healing
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-let slider;
+var slider; // pop slider
+var spreadVect; 
+
 function setup() {
   createCanvas(640, 640);
 
 
-  slider = createSlider(12, 100, 25);
+  slider = createSlider(50, 500, 250); //min max value step
+  //spreadVect = createSlider(1,10,1)
+
   slider.style('background', 'red');
+  //spreadVect.style('background', 'red');
+  
   numBalls = slider.value();
 
-  button = createButton('Reset');
-  button.mousePressed(resetSim);
+  //button = createButton('Reset');
+  //button.mousePressed(resetSim);
 
   textSize('32')
   text('Choose population size', 1200, 550)
   fill(0, 102, 153, 51);
  
-  slider.position(1190,500);
-  button.position(1200, 400);
+  slider.position(window.width * 2,300);
+  //button.position(1200, 400);
 
   for (let i = 0; i < numBalls; i++) {
     balls[i] = new Ball(
       random(width),
       random(height),
-      random(10, 20),
+      random(10,10),
       i,
       balls
     );
@@ -38,6 +45,7 @@ function setup() {
   // console.log(balls[i].col)
   }
 }
+
 function myInputEvent(){
   inp.input(myInputEvent);
 }
@@ -50,7 +58,7 @@ function resetSim(){
     balls[i] = new Ball(
       random(width),
       random(height),
-      random(10, 20),
+      random(10, 10),
       i,
       balls
     );
@@ -59,25 +67,28 @@ function resetSim(){
   }
 }
 
-
 function draw() {
   background(50);
   balls.forEach(ball => {
     ball.collide();
     ball.move();
+    ball.doImmuneSystem();
     ball.display();
   });
 
 }
 
 function mousePressed(){
+  var whichBall;
  var closest = balls[0];
    for(var i = 0; i < balls.length; i++){
     if(dist(mouseX, mouseY, balls[i].x, balls[i].y)<dist(mouseX, mouseY, closest.x, closest.y)){
         closest = balls[i];
     } //on click, finds the closest dot
    }
-  closest.clicked();
+   
+  closest.clicked(whichBall);
+  closest = balls[0];
 }
 
 class Ball {
@@ -96,6 +107,10 @@ class Ball {
     this.health = "infected";
     this.col = 'red';
     //console.log("Ball #" + this.id + " was pressed");
+  }
+  recover(){
+    this.health = "recover";
+    this.col = color(255,104);
   }
   collide() {
     for (let i = 0; i < balls.length; i++) { //this.id + 1
@@ -117,21 +132,25 @@ class Ball {
         balls[i].vx += ax;
         balls[i].vy += ay;
         
-        if(balls[i].health == "infected"){
+        if(balls[i].health == "infected" && this.health == "healthy"){
           this.infect();
+          this.healWait = randomInteger(1,60)
+          
         }
       }
   }
 }
-  clicked(){
-    let d = dist(mouseX, mouseY, this.x, this.y);
-    console.log(d);
-        if (d < 15){
-          this.infect();
-          //console.log(this.col)
-      }
-  }
 
+clicked(ball){
+  let d = dist(mouseX, mouseY, this.x, this.y);
+  console.log( ball);
+      if (d < 15){
+        this.infect();
+        this.healWait = randomInteger(1,60)
+        this.doImmuneSystem();
+        //this.recover();
+    }
+}
   move() {
     this.vy += gravity;
     this.x += this.vx;
@@ -150,11 +169,19 @@ class Ball {
       this.y = this.diameter / 2;
       this.vy *= friction;
     }
-
+   
   }
 
   display() {
     fill(this.col)
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }
+
+  doImmuneSystem(){
+    if(second()+1 > this.healWait && this.health == "infected"){
+      this.recover();
+     }
+  }
 }
+
+  
