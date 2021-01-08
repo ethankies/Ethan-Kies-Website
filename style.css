@@ -18,7 +18,8 @@ canvas {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    
+    position: relative;
+    transform: translate(500%,705px);
   }
 
   p {
@@ -31,6 +32,10 @@ canvas {
   }
   h5 {
     font-size: 4px;
-    transform: translate(77%,400px);
+    transform: translate(1280px,75px);
     
+  }
+
+  .slider {
+    transform: translate(200px,10px);
   }
