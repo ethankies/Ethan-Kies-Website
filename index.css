@@ -5,8 +5,9 @@ body {
 }
 
 a {
-    text-decoration: firebrick;
     color: initial;
+    width: 300px;
+    margin: auto;
 }
 
 .linkButton
