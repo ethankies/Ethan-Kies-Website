@@ -1,8 +1,8 @@
 
 function preload(){
   rImg = loadImage('assets/rock.png');
-  pImg = loadImage('assets/assets/assets/paper.jpg');
-  sImg = loadImage('assets/assets/scissors.png');
+  pImg = loadImage('assets/paper.jpg');
+  sImg = loadImage('assets/scissors.png');
 
  // soundFormat('mp3');
   snip = loadSound('assets/snip.mp3');
