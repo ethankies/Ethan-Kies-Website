@@ -1,13 +1,13 @@
 
 function preload(){
-  rImg = loadImage('rock.png');
-  pImg = loadImage('paper.jpg');
-  sImg = loadImage('scissors.png');
+  rImg = loadImage('assets/rock.png');
+  pImg = loadImage('assets/assets/assets/paper.jpg');
+  sImg = loadImage('assets/assets/scissors.png');
 
  // soundFormat('mp3');
-  snip = loadSound('snip.mp3');
-  thump = loadSound('thump.mp3');
-  crinkle = loadSound('crinkle.mp3');
+  snip = loadSound('assets/snip.mp3');
+  thump = loadSound('assets/thump.mp3');
+  crinkle = loadSound('assets/crinkle.mp3');
 }
 
 let hands = [];
