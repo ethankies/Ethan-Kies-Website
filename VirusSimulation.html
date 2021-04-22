@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+        font: helvetica medium;
+        }
+        #bottomText{
+            font: helvetica medium;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        }
+     
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"></script>
+   
+
+</head>
+<body>
+   <center>
+    <h1 style="font-size:60px">Virus Spread Simulation</h1>
+    
+        <div id = 'bottomText'>
+            <p>Green: suseptible</p>
+            <p>Red: infected</p>
+            <p>Gray: Immune</p>
+        </div>
+</center>
+    <div class="leftContainer" id="charts">
+        <canvas id="myChart" class="graph" width=500 height=500></canvas>
+    </div>
+
+
+        <script src="virus.js"></script>
+   
+  
+</body>
+</html>
