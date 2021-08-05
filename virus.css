@@ -1,0 +1,132 @@
+a{
+   color: black;
+   text-align: left;
+   margin-left: 14%;
+   margin-top: 100%;
+
+}
+.paragraphs{
+    padding-bottom:1%;
+
+}
+    #healthy {
+        height: 25px;
+        width: 25px;
+        background-color: green;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        right: 25%;
+        top: 28%;
+      }
+      #infected {
+        height: 25px;
+        width: 25px;
+        background-color: crimson;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        right: 25%;
+        top: 32%;
+      }
+      #recovered {
+        height: 25px;
+        width: 25px;
+        background-color: gray;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        right: 25%;
+        top: 36%;
+      }
+h1{
+    text-align: left;
+    margin-right: 14%;
+    margin-left: 14%;
+
+    margin-bottom: 0%;
+}
+h4{
+    text-align: left;
+    margin-right: 14%;
+    margin-left: 14%;
+
+    margin-bottom: 0%;
+}
+p{
+    text-align: left;
+    margin-right: 14%;
+    margin-left: 14%;
+
+    margin-bottom: 0%;
+
+}
+body {
+    background-color: white;
+   
+}
+
+
+
+button {
+
+cursor: pointer;
+position:relative;
+top : 50vh;
+
+margin: auto;
+display:block;
+
+}
+#social{
+background-color:green;
+width: 200px;
+font-size: 20px;
+padding: 10px;
+border-radius: 15px;
+border: 2px solid black;
+color: white;
+position: absolute;
+left: 40%;
+top: 80%;
+
+}
+#reset{
+background-color: crimson;
+width: 200px;
+font-size: 20px;
+padding: 10px;
+border-radius: 15px;
+border: 2px solid black;
+color: white;
+position: absolute;
+left: 50%;
+top: 80%;
+}
+
+#canvas-holder {
+   
+   position: absolute;
+   top: 27%;
+   left: 14%;
+
+}
+#healthtext{
+        display:block;
+        position: absolute;
+        right: 16%;
+        top: 28%;
+  
+}
+#infecttext{
+    display:block;
+    position: absolute;
+    right: 16%;
+    top: 32%;
+}
+#recovertext{
+    display:block;
+    position: absolute;
+    right: 16%;
+    top: 36%;
+}
