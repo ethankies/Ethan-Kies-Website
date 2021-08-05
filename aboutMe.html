@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ethan Kies</title>
+   
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="aboutMe.css">
+
+   
+ 
+</head>
+<body>
+     <!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+    if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).addClass('active');}
+  $("#nav-placeholder").load("nav.html");
+  
+});
+</script>
+<!--end of Navigation bar-->
+
+  <h1 style="color:white;position:absolute;bottom:0;left:10vw;font-size:9vw;">Hi, I'm Ethan.</h1>
+<div class="paragraphs">
+  <p> 
+    As more of our daily lives transition into the digital realm, maintaining our privacy and individuality is imperative. 
+    At Virginia Tech, I study cybersecurity in the Business Information Technology major with a minor in Human Computer Interaction.
+    </p>
+    <p>
+      I enjoy speaking Spanish and meeting new people. In my free time I'm either outdoors surfing, hiking, or playing volleyball, or I'm inside playing chess and programming.
+
+
+    </p>
+    <p>
+      I created this website to teach myself JavaScript. As I developed more projects, I grew more fond of HTML and CSS. This is now my space to practice programming,
+      but also to exercise the creative muscles in my brain. This website evolves as my understanding of UX/UI design and programming grows over time. Be sure to head over
+      to the projects section to see what I've been up to recently. 
+    </p>
+    
+</div>
+
+ 
+    <div class="portrait">
+      <img src="assets/portrait.jpg" width=400px height=400px>
+    </div>
+
+</body>
+</html>

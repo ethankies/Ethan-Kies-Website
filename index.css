@@ -1,0 +1,15 @@
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    color: white;
+    /*text-shadow: 2px 2px #E87722;*/
+    text-shadow: 4px 4px black;
+   
+  }
+ 
