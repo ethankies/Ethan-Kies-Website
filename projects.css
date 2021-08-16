@@ -2,4 +2,34 @@ body {
     background-image: linear-gradient(to right, #642667 , #CE0058);
     background-color: rgb(255, 255, 255);
   }
+  h1{
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px rgb( 100, 38, 103);
+    margin: 0;
+   
+  }
 
+#virus{
+ 
+  display: block;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+#hokietalk{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 5%;
+  position: relative;
+}
+
+p{
+  color: white;
+  text-align: center;
+  padding: 1%;
+  text-shadow: 2px 2px rgb( 100, 38, 103);
+}
