@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
     <style>
         body {
       font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden; /* Hide horizontal scrollbar */
      }
     </style>
     <meta charset="UTF-8">
@@ -40,6 +42,8 @@
         "floating dots," and maybe use a colored dot next to the word of the color, just for a visual tie. -->
  
       
+<!--
+
 
     <b id="healthtext">Healthy students</b>
     <b id="infecttext">Infected students</b>
@@ -50,15 +54,22 @@
     <span class="dot" id = "recovered"></span>
 
   
-    
-    <div class="leftContainer" id="canvas-holder">
-        
-        <canvas id="myChart" class="graph" width=500 height=500  style="background-color: white;"> </canvas>
+    -->
+    <div id = canContainer>
+        <div class="leftContainer" id="canvas-holder">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div id="sketch">
+            <!--sketch goes here-->
+        </div>
     </div>
-        <script src="virus.js"></script>  
+  
+        
+    <script src="virus.js"></script>
 
-<button onclick="doSocialDist()" id="social">Social Distance</button>
 <button onclick="resetSimulation()" id ="reset">Reset Simulation</button>
+<button onclick="doSocialDist()" id="social">Social Distance</button>
+
           
 
 </body>

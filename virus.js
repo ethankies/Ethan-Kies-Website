@@ -31,7 +31,8 @@ casesChart = new Chart(myChart,{
 
     },
     options: {
-     responsive: false,
+     responsive: true,
+     maintainAspectRatio: false,
      scales: {
       yAxes: [{
         ticks:{
@@ -41,23 +42,30 @@ casesChart = new Chart(myChart,{
       }]
      },
       layout: {
-        padding: 20
+        padding: 0
     }
     }
 });
 
 let resetSim;
 let socialDistance;
+var cnv
+function centerCanvas(){
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  
+ // cnv.position(x, y);
+ // cnv.style('display', 'block');
+  
+}
 
   function setup(){
-    function centerCanvas(){
-      var x = (windowWidth - width) / 2;
-      var y = (windowHeight - height) / 2;
-      cnv.position(x, y);
-      
-    }
-    let cnv = createCanvas(500,500)
-    centerCanvas();
+
+   cnv  = createCanvas(windowWidth/4,windowHeight/2)
+    cnv.parent('sketch');
+ 
+   centerCanvas();
+
 
    
     textFont('Helvetica Medium')
@@ -76,6 +84,12 @@ let socialDistance;
     for(let i = 0; i < popArray.length; i++){
     }
 
+  }
+  function windowResized() {
+    
+    //centerCanvas();
+    resizeCanvas(windowWidth/4,windowHeight/2);
+    resetSimulation();
   }
  
   function draw(){
@@ -252,7 +266,8 @@ setInterval(function(){
 
 function resetSimulation(){
 
-population = 500;
+population = round((windowHeight+windowWidth)/5);
+console.log(population)
  popArray = [];
  strain = 1111;
  numTotalCases = [];

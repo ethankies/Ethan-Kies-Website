@@ -61,10 +61,7 @@ p{
     margin-bottom: 0%;
 
 }
-body {
-    background-color: white;
-   
-}
+
 
 
 
@@ -72,10 +69,9 @@ button {
 
 cursor: pointer;
 position:relative;
-top : 50vh;
+margin-top: 4vh;
+left: 14%;
 
-margin: auto;
-display:block;
 
 }
 #social{
@@ -86,9 +82,10 @@ padding: 10px;
 border-radius: 15px;
 border: 2px solid black;
 color: white;
-position: absolute;
-left: 40%;
-top: 80%;
+
+
+display: inline-block;
+
 
 }
 #reset{
@@ -99,18 +96,32 @@ padding: 10px;
 border-radius: 15px;
 border: 2px solid black;
 color: white;
-position: absolute;
-left: 50%;
-top: 80%;
+
+display: inline-block;
+
 }
 
 #canvas-holder {
-   
+  /* 
    position: absolute;
    top: 27%;
    left: 14%;
+   height: 50vh !important;
+   width: 25vw !important;
+ 
+   */
+   
+   width: 30vw !important;
+   height: 50vh !important;
+  left:40%;
+
+   position:absolute
+
+  /* margin: 0 auto ; */
+ 
 
 }
+
 #healthtext{
         display:block;
         position: absolute;
@@ -129,4 +140,12 @@ top: 80%;
     position: absolute;
     right: 16%;
     top: 36%;
+}
+
+
+#canContainer{
+    position:relative;
+    left: 14%;
+    margin-top: 3vh;
+
 }
