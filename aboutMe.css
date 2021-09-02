@@ -6,6 +6,7 @@ p {
 }
 .paragraphs{
     padding-top: 0%;
+  
     
 }
 body {
@@ -25,6 +26,7 @@ img {
     float: right;
  
     margin-right: 10%;
+    margin-left: 3%;
   }
 
 h1{
