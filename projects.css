@@ -1,53 +1,81 @@
 body {
-    background-image: linear-gradient(to right, #642667 , #CE0058);
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  h1{
-    color: white;
-    text-align: center;
-    text-shadow: 5px 5px rgb( 100, 38, 103);
-    margin: 0;
-    padding-bottom: 1%;
-    font-size: 600%;
-   
-  }
-  h2{
-    color: white;
-    text-align: center;
-    text-shadow: 3px 3px rgb( 100, 38, 103);
-    margin: 0;
-    padding-top: 3%;
-  }
-#codingProjsText{
- 
-  margin-top:0;
-margin-right:auto;
-margin-bottom:0;
-margin-left: 10vw;
- 
-}
-  #codingProjects{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    text-align: center;
-    margin-top: 0%;
-    position: relative;
+   /* background-image: linear-gradient(to right, #642667 , #CE0058);
+    background-color: rgb(255, 255, 255);*/
+    background-color: rgb(116, 116, 116);
+    font-family: 'Exo', sans-serif;
   }
 
-#hokietalk{
-  display: block;
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-  margin-top: 0%;
-  position: relative;
+#content{
+  max-width: 512px;
+	margin: 0 auto;
+	padding: 64px 24px;
 }
-
-p{
+a:visited{
+ /* color: white; */
+}
+a{
   color: white;
-  text-align: left;
- 
-  text-shadow: 2px 2px rgb( 100, 38, 103);
+  /*text-decoration: none;*/
+}
+a:hover {
+  text-decoration: underline;
+}
+.section{
+  padding-bottom: 48px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+h1 {
+	font-weight: 600;
+	font-size: 24px;
+	color: #FFFFFF;
+	margin-bottom: 12px;
+}
+h2 {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 16px;
+}
+
+h6 {
+	font-weight: 600;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.64);
+	margin-bottom: 24px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+p {
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(255, 255, 255, 0.8);
+}
+ul li {
+	margin-bottom: 32px;
+}
+ul li:last-of-type {
+	margin-bottom: 0;
+}
+.link {
+	font-size: 16px;
+	line-height: 20px;
+	color: #fff;
+	margin-right: 12px;
+}
+.links .link {
+	margin-right: 0;
+	display: block;
+	margin-bottom: 16px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+video{
+  margin-top: 10%;
 }

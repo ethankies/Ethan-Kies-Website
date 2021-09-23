@@ -24,7 +24,7 @@ img {
   position: relative;
 
   float: right;
-
+  border-radius: 50%;
   margin-right: 10%;
   margin-left: 5%;
   margin-bottom: 5%;
@@ -43,15 +43,16 @@ h1{
 
 a{
   display: inline-block;
-  color: white ;
+  color: lightskyblue ;
   text-decoration: none;
   font-size: x-small;
+  margin: 0;
   
 }
 #bottomRightText{
-  color: wheat;
+  color: white;
   margin-right: 10%;
-  margin-top: 10%;
+  margin-top: 0%;
   margin-bottom: 0%;
   font-size: x-large;
   text-align: right;

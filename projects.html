@@ -4,6 +4,9 @@
   <title>Projects</title>
   
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+      </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,40 +31,52 @@ $(function(){
 
 
 <body>
-  
-  <h1>Some Things I've Built</h1>
-  <div id="codingProjsText">
-    <p style="font-size: xx-large;">Coding Projects</p>
-  <p>Simulation of how viruses spread (left) and various platform games (right)</p>
-  </div>
-   
-  <!--  <h2>&lt;h1&gt; Coding projects &lt;/h1&gt;</h2> -->
 
-  <div id="codingProjects">
-    <div id="virus">
-      <a href="VirusSimulation.html"><video width = 400 height = 400 autoplay loop>
-        <source src ="assets\projthumps\virus clip.mp4" type="video/mp4">
-      </video></a> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-      <a href="VirusSimulation.html"><iframe src="https://scratch.mit.edu/projects/63182828/embed" allowtransparency="true" width="400" height="400" frameborder="0" scrolling="no" allowfullscreen></iframe></a>
+  <div id="content">
+    <div class = "section">
+      <img src="assets/portrait.jpg" width=100px style="border-radius: 50%;">
+      <h1>Ethan Kies</h1>
+      <h2>Some things I've built</h2>
+    </div>
+    <div class = "section">
+      <h6>Projects</h6>
+      <ul>
+        <li>
+          <h3><a href="virusSimulation.html">Viral Spread Simulation</a></h3>
+          <p>Visualize the exponential behavior of epidemics</p>
+        </li>
+        <li>
+          <h3><a href="NYT-Article.html" target="_blank">Trendy New York Time's Articles</a></h3>
+          <p>List of the most shared New York Time's articles of the past seven days</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class = "section">
+      <h6>Graphic design</h6>
+      <ul>
+        <li>
+          <h3><a href=" https://www.instagram.com/hokie_talk_/" target="_blank">Hokie Talk</a></h3>
+          <p>Development of podcast in collaboration with two other students. Main role: graphic design and video editing.</p>
+          <img width="200" height="200"src="assets/projthumps/newEpisodeJustinHorn.jpg"> 
+          <video width="200" height="200" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+              <source src="assets\animations\Square.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </li>
+
+      </ul>
     </div>
   </div>
 
-<div id="codingProjsText">
-  <p style="font-size: xx-large;">Graphic Design</p>
-  <p>Graphic design for Hokie Talk podcast</p>
-</div>
+
 
 <a href="
-https://www.instagram.com/hokie_talk_/" target="_blank"id=hokietalk>
-  <video width="400" height="400" autoplay loop>
-    <source src="assets\animations\Square.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <video width="320" height="400" autoplay loop>
-    <source src="assets\animations\Vertical.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <img width="400" height="400"src="assets/projthumps/newEpisodeJustinHorn.jpg"> 
-</div></a>
+https://www.instagram.com/hokie_talk_/" target="_blank"id=hokietalk>linky</a>
+<div id = graphicDesign>  
+ 
+  
+ 
+</div>
 </body>
 </html>
