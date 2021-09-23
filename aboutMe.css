@@ -1,16 +1,16 @@
-p {
-    color: white;
-    margin-right: 10%;
-    margin-left: 10%;
-    font-size: 150%;
-}
+
 .paragraphs{
     padding-top: 0%;
   
+    color: white;
+    
+    margin-left: 10%;
+    font-size: 150%;
+    margin-right: 10%;
     
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Exo', sans-serif;
     background-image: url("/assets/bluegrad.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,20 +20,41 @@ body {
   }
 
 img {
-    border: 5px solid white;
-    position: relative;
+  border: 5px solid white;
+  position: relative;
 
-    float: right;
- 
-    margin-right: 10%;
-    margin-left: 3%;
+  float: right;
+
+  margin-right: 10%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+
   }
 
 h1{
     color:white;
     position:relative;
-    bottom:0;
+   margin-bottom: 0;
     left:10vw;
     font-size:5vw;
     text-shadow:lightskyblue 3px 3px;
+    padding:0;
 }
+
+a{
+  display: inline-block;
+  color: white ;
+  text-decoration: none;
+  font-size: x-small;
+  
+}
+#bottomRightText{
+  color: wheat;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  font-size: x-large;
+  text-align: right;
+}
+
+
