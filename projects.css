@@ -1,7 +1,7 @@
 body {
    /* background-image: linear-gradient(to right, #642667 , #CE0058);
     background-color: rgb(255, 255, 255);*/
-    background-color: rgb(116, 116, 116);
+    background-color: rgb(39, 39, 39);
     font-family: 'Exo', sans-serif;
   }
 
@@ -9,9 +9,6 @@ body {
   max-width: 512px;
 	margin: 0 auto;
 	padding: 64px 24px;
-}
-a:visited{
- /* color: white; */
 }
 a{
   color: white;
