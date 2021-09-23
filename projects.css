@@ -3,6 +3,7 @@ body {
     background-color: rgb(255, 255, 255);*/
     background-color: rgb(39, 39, 39);
     font-family: 'Exo', sans-serif;
+	margin: 8px;
   }
 
 #content{
@@ -75,4 +76,8 @@ ul li:last-of-type {
 }
 video{
   margin-top: 10%;
+}
+
+html{
+	height:100%;
 }
