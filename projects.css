@@ -19,7 +19,14 @@ body {
     margin: 0;
     padding-top: 3%;
   }
-
+#codingProjsText{
+ 
+  margin-top:0;
+margin-right:auto;
+margin-bottom:0;
+margin-left: 10vw;
+ 
+}
   #codingProjects{
     display: block;
     max-width: 100%;
@@ -40,7 +47,7 @@ body {
 
 p{
   color: white;
-  text-align: center;
+  text-align: left;
  
   text-shadow: 2px 2px rgb( 100, 38, 103);
 }

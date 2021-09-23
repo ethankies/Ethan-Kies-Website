@@ -9,7 +9,9 @@ canvas {
     padding: 10px;
     text-align: center;
   }
-
+  body {
+    font-family: 'Courier New', Courier, monospace;
+   }
   button{
     background-color: #333f47; 
     border: none;
