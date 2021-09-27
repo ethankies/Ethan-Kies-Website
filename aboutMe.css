@@ -1,14 +1,6 @@
 
-.paragraphs{
-    padding-top: 0%;
-  
-    color: white;
-    
-    margin-left: 10%;
-    font-size: 150%;
-    margin-right: 10%;
-    
-}
+
+
 body {
     font-family: 'Exo', sans-serif;
     background-image: url("/assets/bluegrad.jpg");
@@ -17,37 +9,40 @@ body {
     background-size: cover;
     background-color: #cccccc;
     overflow-x: hidden;
+    margin: 0;
   }
-
+  @media (max-width:640px){
+    img{
+        display:none;
+    }
+}
 img {
   border: 0.25vw solid white;
-  
   position: relative;
-  max-width: 412px;
-  min-width: 300px;
+  width: 15em;
   float: right;
   border-radius: 50%;
-  margin-right: 10%;
+  
   margin-left: 5%;
-  margin-bottom: 5%;
+ margin-top: 5%;
 
   }
 
 h1{
-    color:white;
-    position:relative;
-   margin-bottom: 0;
-    left:10vw;
-    font-size:5max;
-    text-shadow:lightskyblue 3px 3px;
+
+	font-size: 48px;
+	color: #FFFFFF;
+	margin-bottom: 12px;
+    text-shadow:lightskyblue 2px 2px;
     padding:0;
+    
 }
 
 a{
   display: inline-block;
   color: lightskyblue ;
   text-decoration: none;
-  font-size: x-small;
+  font-size: medium;
   margin: 0;
   
 }
@@ -60,17 +55,33 @@ a{
   text-align: right;
 }
 
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 601px) {
-  h1 {
-    font-size: 80px;
-  }
+.section{
+  padding-bottom: 48px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 50px;
-  }
+p {
+ 
+  padding-top: 0%;
+  
+  color: white;
+  
+  
+  font-size: 20px;
+  margin-right: 0%;
+  
 }
-
+#content{
+  max-width: 712px;
+	margin: 0 auto;
+	padding: 64px 24px;
+  padding-top: 12px;
+}
+h3{
+  font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 16px;
+}

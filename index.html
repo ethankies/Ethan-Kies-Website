@@ -1,135 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Ethan Kies</title>
-   
+  <title>Projects</title>
+  
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
       </style>
-    <link rel="stylesheet" href="aboutMe.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="projects.css">
+   <!-- <link rel = "icon" href = "assets/documentimages/EK.png" type = "image/x-icon">
+    <link rel="icon" type="image/png" href="assets/favicon.png">-->
 
-   
-    <link rel = "icon" href = "assets/documentimages/EK.png" type = "image/x-icon">
-   
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 </head>
+
+
 <body>
-     <!--Navigation bar-->
-<div id="nav-placeholder">
+ <!--Navigation bar-->
+ <div id="nav-placeholder">
 
 </div>
 
 <script>
 $(function(){
-    if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('active'); $(this).addClass('active');}
   $("#nav-placeholder").load("nav.html");
-  
+ 
 });
 </script>
 <!--end of Navigation bar-->
+  <div id="content">
+    <div class = "section">
+      <img src="assets/favicon.png" width=90px style="border-radius: 50%;  margin-bottom: 1%;">
+      <h1>Ethan Kies</h1>
+      <h2>Some things I've built</h2>
+      <a href="https://docs.google.com/document/d/1txl4HQ-aEINfJhdKj8e7LRLCHi0remCw0hTCp8R0BD0/edit?usp=sharing" target="_blank">
+        Résumé &larr;</a>
+        <a href="https://twitter.com/ethan_kies">Twitter &larr; </a>
+    </div>
+    <div class = "section">
+      <h6>Projects</h6>
+      <ul>
+        <li>
+          <h3><a href="VirusSimulation.html">Viral Spread Simulation</a></h3>
+          <p>Visualize the exponential behavior of epidemics</p>
+        </li>
+        <li>
+          <h3><a href="NYT-Article.html" target="_blank">Trendy New York Times Articles</a></h3>
+          <p>List of the most shared New York Time's articles of the past seven days</p>
+        </li>
+        <li>
+          <h3><a href="https://chrome.google.com/webstore/detail/dark-mode-for-canvas/bfhfiehlfcbhooocpacdmflopmjgehhf?hl=en&authuser=0" target="_blank">Dark Mode For Canvas</a></h3>
+          <p>Chrome extension that changes Canvas to dark mode</p>
+          
+        </li>
+      </ul>
+    </div>
 
-<h1>Hi, I'm Ethan</h1>
-
-<div id="portrait" width = 500px height = 500px>
-  <img src="assets/portrait.jpg" width=30% >
-</div>
-
-<style>
-  .label:after{
-      content:'learning: React.';
-      
-  }
-  .label:hover:after{
-      content:'looking for: internships.';
-      
-  }
-  
-  </style>
-  
-  <div id = divHover style = "margin-left: 10%;margin-top: 0;padding:0; color:lightskyblue;" >
-    <p style = "font-size:250%;">What I'm <span class="label"></span></p>
+    <div class = "section">
+      <h6>Graphic design & Video </h6>
+      <ul>
+        <li>
+          <h3><a href=" https://www.instagram.com/hokie_talk_/" target="_blank">Hokie Talk</a></h3>
+          <p>Development of podcast in collaboration with two other students</p>
+       <!--  <img width="200" height="200"src="assets/projthumps/newEpisodeJustinHorn.jpg"> 
+          <video width="200" height="200" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+              <source src="assets\animations\Square.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </li>
+      --->
+      </ul>
+    </div>
+    <div class = "section links">
+      <a href="mailto:ethankies@vt.edu" class="link">Email</a>
+      <a href="https://twitter.com/ethan_kies" class="link">Twitter</a>
+      <a href="https://www.linkedin.com/in/ethan-kies/" class="link">LinkedIn</a>
+      <a href="https://docs.google.com/document/d/1txl4HQ-aEINfJhdKj8e7LRLCHi0remCw0hTCp8R0BD0/edit?usp=sharing" target="_blank">
+        Résumé</a>
+    </div>
   </div>
-
-<!--
-  <div id = "myDiv">
-  What I'm working on: <span style="color:blue">this website</span> and work with APIs
-</div>
-<script>
-  $("#myDiv").css("color","white");
-  $("#myDiv").css("margin-left","10%");
-  $("#myDiv").css("font-size","200%");
-  
-  $('#myDiv')
-    .data('textToggle', "What I'm looking for: internships")
- 
-    .hover(function (e) {
-        var that = $(this);
-        
-        // get the text from data attribute
-        var textToSet = that.data('textToggle');
-
-        // save the current text so it can be reverted
-        that.data('textToggle', that.text());
-
-        // set the new text
-        that.text(textToSet);
-        
-    }, function (e) {
-        var that = $(this);
-
-        // get the text from data attribute
-        var textToSet = that.data('textToggle');
-
-        // save the current text so it can be reverted
-        that.data('textToggle', that.text());
-
-        // set the new text
-        that.text(textToSet);
-        
-    });
-</script>
-
--->
-
-
-<div class="paragraphs">
-  <p>I am a student at Virgina Tech studying <a href="https://bit.vt.edu/academics/undergraduate-programs/cyber.html" style="font-size: 100%;text-decoration: underline;text-decoration-color:white;color:lightskyblue">BIT-Cyber</a>.</p>
-  <p>My <a href="https://www.gallup.com/cliftonstrengths/en/253736/cliftonstrengths-domains.aspx" style="font-size:100%; text-decoration: underline;text-decoration-color:white;color:lightskyblue">strengths</a> are Positivity, Woo, Includer, Adaptability, and Empathy.</p>
-  <p> 
-     I am in pursuit of developing robust cybersecurity systems
-    that protect our privacy and humanity. With a minor in Human Computer Interaction, I intend to be equipped with necessary
-    design and people skills relating to UI/UX to mitigate human error and facilitate a safe, open internet.
-    </p>
-    <p>
-      When I'm not doing school work, you can find me at your local volleyball court, surfing,
-      playing chess, or programming.
-
-
-    </p>
-    <p>
-      Welcome to my online home! What turned into me messing around with JavaScript while sick with COVID-19
-      has
-         evolved into a space for me to be creative, experiment, and have fun with programming.
-       I am constantly making changes and tweaking as my CSS and HTML capabilities grow over time. Be sure to head over
-      to the <a href="projects.html" style="font-size: 100%;text-decoration: underline;text-decoration-color:white;color:lightskyblue">projects</a> section to see what I've been up to recently. 
-    </p>
-   
-</div>
-
-
-<div id=bottomRightText>
-  <p>&zwnj; </p>
-  <p style="margin: 0;">Ethan</p>
-  <p style="margin: 0;">Kies</p>
- 
-  <a href="https://twitter.com/ethan_kies">Twitter</a>
-  <a href="https://www.linkedin.com/in/ethan-kies/">LinkeIn</a>
-</div>
-<!--
-<img src="assets/beach.jpg" width=378px height=504px>
--->
 </body>
 </html>
