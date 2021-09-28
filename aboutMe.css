@@ -17,9 +17,9 @@ body {
     }
 }
 img {
-  border: 0.25vw solid white;
+  border: 3px solid white;
   position: relative;
-  width: 15em;
+  width: 252px;
   float: right;
   border-radius: 50%;
   
