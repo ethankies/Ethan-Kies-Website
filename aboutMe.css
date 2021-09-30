@@ -3,13 +3,18 @@
 
 body {
     font-family: 'Exo', sans-serif;
-    background-image: url("/assets/bluegrad.jpg");
+   /* background-image: url("/assets/bluegrad.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #cccccc;
-    overflow-x: hidden;
+    overflow-x: hidden; */
     margin: 0;
+    background-color: white;
+    background: rgb(107,101,207);
+
+     background: #5979b4;
+
   }
   @media (max-width:640px){
     img{
