@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+ 
       </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,14 +27,25 @@
 
 <body>
  <!--Navigation bar-->
- <div id="nav-placeholder">
+ <div id="nav-placeholder" >
 
 </div>
-
 <script>
+
 $(function(){
-  $("#nav-placeholder").load("nav.html");
  
+  
+});
+
+jQuery(function($){
+  $("#nav-placeholder").load("nav.html");
+
+  var path = window.location.href;
+  $('a').each(function(){
+    if (this.href === path) {
+      $(this).addClass('active')
+    }
+  });
 });
 </script>
 <!--end of Navigation bar-->
