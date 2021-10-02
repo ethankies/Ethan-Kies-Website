@@ -24,12 +24,24 @@
 
 </div>
 
-<script>
+<script>/*
 $(function(){
     if ($(this).prop('href') == window.location.href) {
                 $(this).addClass('active'); $(this).addClass('active');}
   $("#nav-placeholder").load("nav.html");
   
+});
+
+*/
+jQuery(function($){
+  $("#nav-placeholder").load("nav.html");
+
+  var path = window.location.href;
+  $('a').each(function(){
+    if (this.href === path) {
+      $(this).addClass('active')
+    }
+  });
 });
 </script>
 <!--end of Navigation bar-->
