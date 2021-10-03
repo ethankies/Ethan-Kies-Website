@@ -1,4 +1,4 @@
-var population = 500;
+var population = 409;
 let popArray = [];
 let strain = 1111;
 var numTotalCases = [];
@@ -7,13 +7,19 @@ var positivityRate;
 let arrCurrentCases = [];
 let numSus = [];
 let numRecovered = [];
+let casesdata = [];
 let totalRecovered = 0; 
 var deaths = 0;
 
 var isSocialDist = new Boolean(false);
-const start = Date.now();
+let start;
 
 let fontSize = (18);
+
+
+
+let totalInfectorsArr = [];
+let totalSecondInfs = [];
 
 var myChart = document.getElementById("myChart");
 casesChart = new Chart(myChart,{
@@ -54,14 +60,11 @@ function centerCanvas(){
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   
- // cnv.position(x, y);
- // cnv.style('display', 'block');
-  
 }
 
   function setup(){
 
-   cnv  = createCanvas(windowWidth/4,windowHeight/2)
+   cnv  = createCanvas(400,400)
     cnv.parent('sketch');
  
    centerCanvas();
@@ -70,8 +73,8 @@ function centerCanvas(){
    
     textFont('Helvetica Medium')
     updateChart(casesChart,currentCases);
-    text('Virus Spread', 175, 430)
-    console.log('Wdith: ', width, 'Height: ', height)
+   
+    
 
     //create people
     /*
@@ -81,19 +84,18 @@ function centerCanvas(){
     */
    resetSimulation();
     infect(3)
-    for(let i = 0; i < popArray.length; i++){
-    }
-
+    start = Date.now();
+   
   }
   function windowResized() {
     
-    //centerCanvas();
-    resizeCanvas(windowWidth/4,windowHeight/2);
+    centerCanvas();
+   //resizeCanvas(windowWidth/4,windowHeight/2);
     resetSimulation();
   }
- 
+ let interval = 2;
   function draw(){
-
+    document.getElementById("output").innerHTML= rnaught;
       if(isSocialDist){
         background('white') 
         background('rgba(133, 31, 64, 0.2)')
@@ -104,22 +106,31 @@ function centerCanvas(){
       //  console.log("social dist is false")
       }
    
-
+    
 
       display();
       heal();  
-        setInterval(updateStats(), 1000);
+      setInterval(updateStats(), 0);
       textSize(18)
+      showStats()
+
+
+      //calculate R
+      if((frameCount % (interval * 30) == 0)){
+        calcR()
+      }
+    
     
     }
 
-  function person(xin,yin, id, state, strain, infTime){
+  function person(xin,yin, id, state, strain, infTime, secondInfs){
     //xin, yin - xpos and ypos
     //dir - direction
     //id keep track of each instance
     //state - infected, healthy, suseptible
     //strain - virus strain, 4bit integer
-        //_ _ _ _ Infectivity rate and hue,
+   //_ _ _ _ Infectivity rate and hue,
+   
 
     this.x = xin;
     this.y = yin;
@@ -135,11 +146,14 @@ function centerCanvas(){
     this.ydir = random(0,1);
 
     this.infTime = infTime;
+
+    this.secondInfs = secondInfs // number of secondary infections from this person
   }
 
   function display(){
     noStroke();
       for(let i = 0; i < popArray.length; i++){
+     
           spread(popArray[i]);
           if(popArray[i].state == 'Infected'){
               fill('Crimson')
@@ -169,8 +183,7 @@ function centerCanvas(){
       }
   }
   function spread(idin){
-      if(idin.state == 'Infected'){
-
+    if(idin.state == 'Infected'){ 
       for(let i = 0; i < popArray.length; i++){
           if(popArray.id == idin.id){
               continue;
@@ -179,9 +192,14 @@ function centerCanvas(){
           let dx = popArray[i].x - idin.x;
           let dy = popArray[i].y - idin.y;
           let distance = sqrt(dx*dx + dy*dy)
-          if(distance < 5 && random(1,2)>1.5){
+
+          if(distance < 3 && random(1,2)>1 && popArray[i].state == 'Healthy'){
            infect(popArray[i].id);
-        }
+           idin.secondInfs+= 1
+           //console.log(idin + 'increased second infs')
+           //console.log(popArray[i].id+ 'got infected')
+        
+          }
         }
       }
   }
@@ -203,10 +221,14 @@ function centerCanvas(){
     }
   }
 }
-
+var infperiod;
 function heal(){
     for(let i = 0; i < popArray.length; i++){
-        if(Date.now() - popArray[i].infTime > 6000 && popArray[i].state == 'Infected'){
+      infperiod =  width*15
+        if(Date.now() - popArray[i].infTime > width*15 && popArray[i].state == 'Infected'){
+          if(this.id == 3){
+           
+          }
             popArray[i].state = 'Sus';
             currentCases--;
             totalRecovered++
@@ -224,14 +246,17 @@ function updateStats(){
         numRecovered.push(totalRecovered);
         arrCurrentCases.push(currentCases);
         numSus.push(population-currentCases);
+       
+        
     }
 }
 
 function updateChart(chart,data,day){
- // chart.data.labels.push("Day " + ((Date.now()-start)/1000));
+ // chart.data.labels.push("Day " + (round((Date.now()-start)/1500)));
  chart.data.labels.push("");
  chart.data.datasets.forEach((dataset) => {
     dataset.data.push(data);
+    casesdata.push(currentCases);
 });
 //  myChart.data.datasets[0].data = arrCurrentCases;
  
@@ -266,8 +291,8 @@ setInterval(function(){
 
 function resetSimulation(){
 
-population = round((windowHeight+windowWidth)/5);
-console.log(population)
+  totalInfectorsArr = [];
+ totalSecondInfs = [];
  popArray = [];
  strain = 1111;
  numTotalCases = [];
@@ -281,7 +306,7 @@ isSocialDist = false;
 resetChart(casesChart)
 
   for(let i = 0; i < population; i++){
-    popArray[i] = new person(random(10,width-10),random(10,height-10),i,'Healthy', strain)
+    popArray[i] = new person(random(10,width-10),random(10,height-10),i,'Healthy', 0, 0, 0)
 }
 infect(3)
 
@@ -308,7 +333,88 @@ function ligma(num){
     if(currentCases < num - 15){
       isSocialDist = false;
     }
-    
-   
   }
 } 
+
+function vax(){
+  //num is the percent of population to vaccinate
+  let num = prompt("What percentage of the population would you like to vaccinate. Enter a number between 0 and 100.");
+  num = num/25
+  for(let i = 0; i < popArray.length; i+=num){
+    
+    if(popArray[i].state == 'Infected'){
+      currentCases--;
+    } 
+    popArray[i].state = 'Sus';
+  }
+}
+
+var rnaught;
+function showStats(){
+ 
+ // rnaught = 1000 * numTotalCases[numTotalCases.length-1] / (Date.now() - start) ;
+  //console.log ( numTotalCases[numTotalCases.length-1])
+  //currentCases - casesdata[casesdata.length-5] / infperiod
+  var totalx = 0;
+  var totaly = 0;
+  var totalcounted = 0;
+  for(var i = 0; i <popArray.length; i++){
+    if(popArray[i].state == 'Infected'){
+      totalx+=popArray[i].x
+      totaly+=popArray[i].y
+      totalcounted++;
+    } else {
+      continue;
+    }
+
+  }
+  var avgx = totalx/totalcounted;
+  var avgy = totaly/totalcounted;
+  noStroke()
+  fill(255,0,0,10)
+  ellipse(avgx, avgy, (15+currentCases), ( 15+currentCases));
+  fill(255,0,0)
+ 
+//console.log(casesdata)
+
+
+}
+
+function calcR (){
+  let totalSecs = 0; //total number of second infections from our infectors
+  let totalInfectors = 0; // number of currently infeFcted people
+
+
+  for(let i = 0; i < popArray.length; i++){
+    if(popArray[i].state == 'Infected'){
+       
+        totalInfectors++;
+        
+        totalSecs+= popArray[i].secondInfs;
+
+
+    } else {
+      continue;
+    }
+  }
+  //rnaught = totalSecs / currentCases;
+
+  //console.log('There are ' + totalSecs + ' second infections and '+ totalInfectors + ' currently infected people. Rnaught = ' + rnaught)
+  //console.log(totalInfectorsArr)
+  //console.log(totalSecondInfs)
+  console.log(totalInfectorsArr.reduce(add,0))
+  console.log(rnaught)
+
+  totalInfectorsArr.push(totalInfectors)
+  totalSecondInfs.push(totalSecs)
+
+for(let i = 0 ; i < totalInfectorsArr.length; i++){
+ rnaught = round(totalInfectorsArr.reduce(add,0) / numTotalCases[numTotalCases.length-1], 2);
+}
+
+
+}
+
+function add(accumulator, a) {
+  return accumulator + a;
+}

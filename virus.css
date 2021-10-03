@@ -1,77 +1,43 @@
-a{
-   color: black;
+
+a {
+   color: rgba(133, 31, 64, 0.6);
    text-align: left;
-   margin-left: 14%;
-   margin-top: 100%;
+   text-decoration: none;
 
 }
 .paragraphs{
     padding-bottom:1%;
-
+    margin-right: 14%;
+    margin-left: 14%;
+    
 }
-    #healthy {
-        height: 25px;
-        width: 25px;
-        background-color: green;
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        right: 25%;
-        top: 28%;
-      }
-      #infected {
-        height: 25px;
-        width: 25px;
-        background-color: crimson;
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        right: 25%;
-        top: 32%;
-      }
-      #recovered {
-        height: 25px;
-        width: 25px;
-        background-color: gray;
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        right: 25%;
-        top: 36%;
-      }
+   
 h1{
     text-align: left;
     margin-right: 14%;
     margin-left: 14%;
-
+    color: rgb(133, 31, 64);
     margin-bottom: 0%;
 }
 h4{
     text-align: left;
-    margin-right: 14%;
-    margin-left: 14%;
+    color: rgba(133, 31, 64, 0.7);
 
     margin-bottom: 0%;
 }
-p{
+.paragraphs p{
     text-align: left;
-    margin-right: 14%;
-    margin-left: 14%;
-
     margin-bottom: 0%;
-
 }
-
-
 
 
 button {
 
 cursor: pointer;
 position:relative;
-margin-top: 4vh;
-left: 14%;
+margin-top: 50px;
 
+margin: 10px;
 
 }
 #social{
@@ -80,7 +46,7 @@ width: 200px;
 font-size: 20px;
 padding: 10px;
 border-radius: 15px;
-border: 2px solid black;
+border: 2px dotted black;
 color: white;
 
 
@@ -89,63 +55,125 @@ display: inline-block;
 
 }
 #reset{
-background-color: crimson;
+background-color: rgba(220, 20, 60,0.9);
 width: 200px;
 font-size: 20px;
 padding: 10px;
 border-radius: 15px;
-border: 2px solid black;
+border: 2px dotted black;
 color: white;
 
 display: inline-block;
 
 }
+#vax{
+background-color:lightblue;
+width: 135px;
+font-size: 20px;
+padding: 10px;
+border-radius: 10px;
+border: 2px solid black;
+color: white;
 
-#canvas-holder {
-  /* 
-   position: absolute;
-   top: 27%;
-   left: 14%;
-   height: 50vh !important;
-   width: 25vw !important;
- 
-   */
-   
-   width: 30vw !important;
-   height: 50vh !important;
-  left:40%;
 
-   position:absolute
+display: inline-block;
 
-  /* margin: 0 auto ; */
- 
 
 }
 
-#healthtext{
-        display:block;
-        position: absolute;
-        right: 16%;
-        top: 28%;
-  
-}
-#infecttext{
-    display:block;
-    position: absolute;
-    right: 16%;
-    top: 32%;
-}
-#recovertext{
-    display:block;
-    position: absolute;
-    right: 16%;
-    top: 36%;
-}
 
 
 #canContainer{
-    position:relative;
-    left: 14%;
+    /*
+    position: static;
     margin-top: 3vh;
+    margin-left: 14%;*/
+    
+   margin-left: 14%;
+   margin-right: 14%;
+   border-bottom: 1px solid #494949;
+   border-top: 1px solid #494949;
+   margin-top: 15px;
+   padding-top: 10px;
+   
+    
+}
+#sketch{
+    position: relative;
+    display: inline-block;
 
+}
+#canvas-holder { /*Chart JS*/
+    /* 
+     position: absolute;
+     top: 27%;
+     left: 14%;
+   
+     width: 500px !important;
+     height: 500px !important;
+   
+     */
+    
+  
+  
+     margin-right: 50px;
+     position: relative;
+     display: inline-block;
+   
+  
+  }
+  @media (max-width:960px) {canvas{
+    height: 200px !important;
+     width: 200px !important;
+}} 
+
+@media (min-width:960px) {canvas{
+    height: 400px !important;
+     width: 400px !important;
+} } 
+#pright{
+    
+   
+    float: right;
+   
+}
+.circle {
+    width:10px;
+    height:10px;
+    border-radius:50px;
+    font-size:20px;
+    color:black;
+    line-height:10px;
+    background: green;
+   
+   
+  
+    margin-right: 10px;
+    margin-top: 15px;
+    font-size: small;
+   
+}
+.red-circle {
+    background: crimson;
+}
+.gray-circle {
+    background: gray;
+}
+.lightred-circle {
+    background: rgba(255,0,0,0.1);
+}
+.buttons {
+    position: relative;
+    display: block;
+    margin-left: 14%;
+    margin-top: 25px;
+}
+.circle{
+    margin-bottom: 10px;
+}
+#container {
+    margin-right: 14%;
+    margin-left: 14%;
+    border-top: 1px solid #494949;
+    padding-top: 1px;
 }
