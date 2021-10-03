@@ -5,7 +5,7 @@
     <style>
         body {
       font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden; /* Hide horizontal scrollbar */
+     
      }
     </style>
     <meta charset="UTF-8">
@@ -30,47 +30,53 @@
             Click the "Reset Simulation" button then try slowing the spread by making the students social distance. The sooner social distance is implemented, the slower
             the rate of transmission.
         </p>
+        <p>
+            Note that if R<sub>0</sub> is less than 1, the disease will not spread and will eventually die out.
+            If R<sub>0</sub> is 1, the disease will remain stable in the community but will not cause an epidemic.
+            If R<sub>0</sub> is greater than 1, the disease will spread and may cause an epidemic.
+        </p>
+        <p><a href="index.html">Click here to go back to projects.</a></p>
+        
+      
     </div>
-    <a href="projects.html">Click here to go back to projects.</a>
+<div id = "container">
+
+    <p id = "pright">R<sub>0</sub>: <span id="output"></span></p><p id="output"></p>
+<div class = "circle"><span style="margin: 15px;">Healthy</span></div>
+<div class = "circle red-circle"><span style="margin: 15px;">Infected</span></div>
+<div class = "circle gray-circle"><span style="margin: 15px;">Recovered/Immune</span></div>
+<div class = "circle lightred-circle"><span style="margin: 15px;">Epicenter</span></div>
+
+</div>
+  
     
  
    
 </head>
 <body>
+    
+
     <!--Virus Spread Simulation: This is a very cool project, but there is very little of an explanation of what's happening, or how you can shift the simulation. 
         For example, what does the "Social Distance" button do? Do you need to select and hold it for it to react/change? Also, the color key could be closer to the 
         "floating dots," and maybe use a colored dot next to the word of the color, just for a visual tie. -->
  
-      
-<!--
-
-
-    <b id="healthtext">Healthy students</b>
-    <b id="infecttext">Infected students</b>
-    <b id="recovertext">Immune students</b>
-
-    <span class="dot" id = "healthy"></span>
-    <span class="dot" id = "infected"></span>
-    <span class="dot" id = "recovered"></span>
-
-  
-    -->
-    <div id = canContainer>
-        <div class="leftContainer" id="canvas-holder">
+   
+    <div id = "canContainer">
+        <div id="canvas-holder">
             <canvas id="myChart"></canvas>
         </div>
         <div id="sketch">
             <!--sketch goes here-->
         </div>
     </div>
-  
-        
     <script src="virus.js"></script>
-
-<button onclick="resetSimulation()" id ="reset">Reset Simulation</button>
-<button onclick="doSocialDist()" id="social">Social Distance</button>
-
-          
+    
+    <div class="buttons">
+        <button onclick="resetSimulation()" id ="reset">Reset Simulation</button>
+        <button onclick="doSocialDist()" id="social">Social Distance</button>
+       <!-- <button onclick="vax()"id="vax">Vaccinate</button>-->
+        </div>
+                 
 
 </body>
 
