@@ -2,8 +2,10 @@
 
 
 body {
-    font-family: 'Exo', sans-serif;
+    
+   
    /* background-image: url("/assets/bluegrad.jpg");
+   font-family: 'Exo', sans-serif;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -11,9 +13,9 @@ body {
     overflow-x: hidden; */
     margin: 0;
     background-color: white;
-    background: rgb(107,101,207);
+    background: #bdc3cf;
 
-     background: #5979b4;
+   /*  background: #5979b4; */
 
   }
   @media (max-width:640px){
@@ -21,62 +23,71 @@ body {
         display:none;
     }
 }
-img {
-  border: 3px solid white;
-  position: relative;
-  width: 252px;
-  float: right;
-  border-radius: 50%;
-  
-  margin-left: 5%;
- margin-top: 5%;
-
-  }
-
-h1{
-
-	font-size: 48px;
-	color: #FFFFFF;
-	margin-bottom: 12px;
-    text-shadow:lightskyblue 2px 2px;
-    padding:0;
-    
-}
-
-a{
-  display: inline-block;
-  color: lightskyblue ;
-  text-decoration: none;
-  font-size: medium;
-  margin: 0;
-  
-}
-#bottomRightText{
-  color: white;
-  margin-right: 10%;
-  margin-top: 0%;
-  margin-bottom: 0%;
-  font-size: x-large;
-  text-align: right;
-}
-
-.section{
-  padding-bottom: 48px;
-	margin-bottom: 48px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
 p {
- 
+  font-family: 'Arvo', serif;
   padding-top: 0%;
   
-  color: white;
+  color: #4f4f63;
   
   
   font-size: 20px;
   margin-right: 0%;
   
 }
+img {
+  border: 3px dashed #4f4f63;
+  position: relative;
+  width: 252px;
+  float: right;
+  border-radius: 50%;
+  
+  margin-left: 5%;
+ 
+
+  }
+
+h1{
+  font-family: 'Crete Round', sans-serif;
+	font-size: 48px;
+	color: #4f4f63;
+	margin-bottom: 12px;
+    /*text-shadow:lightskyblue 2px 2px;*/
+    padding:0;
+    
+}
+
+a{
+  font-family: 'Arvo', serif;
+  display: inline-block;
+  
+  color: #767ea0 ;
+
+  font-size: medium;
+  margin: 0;
+
+  
+ 
+  
+}
+#bottomRightText{
+
+  margin-right: 10%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: x-large;
+  text-align: right;
+}
+#bottomRightText a {
+  font-size: small;
+}
+
+.section{
+  padding-bottom: 48px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid rgba(111, 116, 138,0.25);
+}
+
+
 #content{
   max-width: 712px;
 	margin: 0 auto;

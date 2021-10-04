@@ -2,7 +2,9 @@ body {
    /* background-image: linear-gradient(to right, #642667 , #CE0058);
     background-color: rgb(255, 255, 255);*/
     background-color: rgb(39, 39, 39);
+
     font-family: 'Exo', sans-serif;
+	
 	
   }
 
@@ -13,6 +15,7 @@ body {
 }
 a{
   color: white;
+  margin-right: 10px;
   /*text-decoration: none;*/
 }
 a:hover {
