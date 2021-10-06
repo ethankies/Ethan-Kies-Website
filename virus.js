@@ -156,11 +156,12 @@ function centerCanvas(){
      
           spread(popArray[i]);
           if(popArray[i].state == 'Infected'){
-              fill('Crimson')
+            fill('crimson')
           } else if (popArray[i].state == 'Healthy') { fill('green') } else 
           if (popArray[i].state == 'Sus') {fill('gray')}
           ellipse(popArray[i].x, popArray[i].y, popArray[i].diameter, popArray[i].diameter)
-        fill('Crimson')
+       // fill('rgba(133, 31, 64,.75)')
+       fill('crimson')
         if(isSocialDist == true && (popArray[i].id%10 != 0)){
           popArray[i].vx = random(-1,1);
           popArray[i].vy = random(-1,1);

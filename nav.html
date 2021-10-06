@@ -1,39 +1,47 @@
 
     <style>
-
-.topnav {  
+  .topnav {  
     overflow: hidden;
+    background-color: rgba(51, 51, 51,0.9);
+    backdrop-filter: blur(6px);
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 100;
   }
+
   
-  /* Style the links inside the navigation bar */
+  /* Style the links inside the navigation bar *     color: #6f748a;*/
   .topnav a {
     float: right;
-    color: #6f748a;
-    color: rgb(240, 240, 240);
+
+    color: #D6D6D5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
     font-family: 'Arvo', serif;
-    
+    display: inline-flex;
+    justify-content: space-between;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
     /*background-color: rgba(0, 0, 0,0.05);
-    border-radius: 20%; */
-    color: #4f4f63;
-    color: #6f748a;
+    border-radius: 20%;
+      color: #4f4f63; */
+  
+    color: #e0e0df;
   
     
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    color: rgb(236, 236, 236);
+    color: #f5f506;
   }
   .currentLink {
    color: #640200;

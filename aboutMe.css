@@ -10,11 +10,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-color: #cccccc;
-    overflow-x: hidden; */
+     */
     margin: 0;
     background-color: white;
-    background: #bdc3cf;
-
+    background: #FBFBFD;
+    overflow: auto;
    /*  background: #5979b4; */
 
   }
@@ -27,29 +27,29 @@ p {
   font-family: 'Arvo', serif;
   padding-top: 0%;
   
-  color: #4f4f63;
+  color: rgb(51,51,51);
   
   
-  font-size: 20px;
+  font-size: 22px;
   margin-right: 0%;
   
 }
 img {
-  border: 3px dashed #4f4f63;
+  border: 3px dashed #34283C;
   position: relative;
   width: 252px;
   float: right;
   border-radius: 50%;
   
   margin-left: 5%;
- 
-
+ filter:grayscale(1);
+ z-index: 0;
   }
 
 h1{
   font-family: 'Crete Round', sans-serif;
 	font-size: 48px;
-	color: #4f4f63;
+	color: #34283C;
 	margin-bottom: 12px;
     /*text-shadow:lightskyblue 2px 2px;*/
     padding:0;
@@ -71,11 +71,12 @@ a{
 }
 #bottomRightText{
 
-  margin-right: 10%;
-  margin-top: 0%;
+  margin-right: 0%;
+  margin-top: -10%;
   margin-bottom: 0%;
   font-size: x-large;
   text-align: right;
+  display: absolute;
 }
 #bottomRightText a {
   font-size: small;
@@ -89,10 +90,11 @@ a{
 
 
 #content{
-  max-width: 712px;
+  max-width: 812px;
 	margin: 0 auto;
 	padding: 64px 24px;
   padding-top: 12px;
+  margin-top: 50px
 }
 h3{
   font-weight: 400;
@@ -100,4 +102,12 @@ h3{
 	line-height: 24px;
 	color: rgba(255, 255, 255, 0.8);
 	margin-bottom: 16px;
+}
+::selection {
+  background: #1a1a1a; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: #1a1a1a; /* Gecko Browsers */
+  color: white;
 }
