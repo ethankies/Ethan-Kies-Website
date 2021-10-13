@@ -13,25 +13,31 @@ a:hover{
     padding-bottom:1%;
     margin-right: 14%;
     margin-left: 14%;
-    
+    border-top: 1px solid #494949;
 }
    
 h1{
-    text-align: left;
+    text-align: center;
     margin-right: 14%;
     margin-left: 14%;
     color: rgba(133, 31, 64, 1);
     margin-bottom: 0%;
 }
+h2 {
+   text-align: center;
+   font-weight: 100;
+   margin-top: 10px;
+}
 h4{
     text-align: left;
-    color: rgba(133, 31, 64, 1);
+    color: black;
 
     margin-bottom: 0%;
 }
 .paragraphs p{
     text-align: left;
     margin-bottom: 0%;
+    line-height: 1.6;
 }
 
 
@@ -148,6 +154,8 @@ display: inline-block;
    border-top: 1px solid #494949;
    margin-top: 15px;
    padding-top: 10px;
+   padding-bottom: 0;
+   margin-bottom: 0;
    
     
 }
@@ -187,7 +195,8 @@ display: inline-block;
 #pright{
     
    
-    float: right;
+    
+    
    
 }
 .circle {
@@ -219,7 +228,10 @@ display: inline-block;
     position: relative;
     display: block;
     margin-left: 14%;
-    margin-top: 25px;
+    margin-top: 0px;
+    margin-right: 14%;
+    float: right;
+    
 }
 .circle{
     margin-bottom: 10px;
@@ -227,6 +239,8 @@ display: inline-block;
 #container {
     margin-right: 14%;
     margin-left: 14%;
-    border-top: 1px solid #494949;
+    margin-bottom: 5px;
     padding-top: 1px;
+    
+    
 }

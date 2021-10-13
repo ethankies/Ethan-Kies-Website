@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+        body {
+      font-family: Arial, Helvetica, sans-serif;
+     
+     }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation of How Viruses Spread</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/virusAssets/virusimg.png">
+   <link rel="stylesheet" href="virus.css">
+    
+     
+    <h1>Simulation of How Viruses Spread</h1>
+    <h2>Illustration of the exponential spread of viruses</h2>
+   
+    <div id = "canContainer">
+        <div id="canvas-holder">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div id="sketch">
+            <!--sketch goes here-->
+        </div>
+    </div>
+    <div class="buttons">
+        <input type="checkbox" onclick="doSocialDist()" id="social"> Social Distance</input>
+        <button onclick="resetSimulation()" id ="reset">Reset Simulation</button>
+      
+ 
+       <!-- <button onclick="vax()"id="vax">Vaccinate</button>-->
+        </div>
+    <div id = "container">
+        
+        <p id = "pright">R<sub>0</sub>: <span id="output"></span></p><p id="output"></p>
+        <div class = "circle"><span style="margin: 15px;">Healthy</span></div>
+        <div class = "circle red-circle"><span style="margin: 15px;">Infected</span></div>
+        <div class = "circle gray-circle"><span style="margin: 15px;">Recovered/Immune</span></div>
+        <div class = "circle lightred-circle"><span style="margin: 15px;">Epicenter</span></div>
+        
+        </div>
+       
+                  
+    <div class = "paragraphs" style="text-align: center;">
+        <h4>Sick with COVID-19, I grew bored in Virginia Tech's quarantine dorm. Like anyone would do, I decided to model how the disease was spreading among the students. </h4>
+        <p>
+            After just a few seconds of letting the simulation run, already a nice <strong>bell curve</strong> begins to take shape, demonstrating the exponential behavior of a disease like COVID-19.
+            Click the "Reset Simulation" button then try slowing the spread by making the students social distance. The sooner social distance is implemented, the slower
+            the rate of transmission. Click the labels at the top of the graph to see a different perspective of the spread.
+        </p>
+        <p>
+            Note that if R<sub>0</sub> is less than 1, the disease will not spread and will eventually die out.
+            If R<sub>0</sub> is 1, the disease will remain stable in the community but will not cause an epidemic.
+            If R<sub>0</sub> is greater than 1, the disease will spread and may cause an epidemic.
+        </p>
+        <p>Click <a href="index.html">here</a> to go back to projects. And click <a href="https://github.com/ethankies/Ethan-Kies-Website/blob/master/virus.js">here</a> to see my code!</p>
+      
+    </div>
+ 
+   
+</head>
+<body>
+    
+
+    <!--Virus Spread Simulation: This is a very cool project, but there is very little of an explanation of what's happening, or how you can shift the simulation. 
+        For example, what does the "Social Distance" button do? Do you need to select and hold it for it to react/change? Also, the color key could be closer to the 
+        "floating dots," and maybe use a colored dot next to the word of the color, just for a visual tie. -->
+ 
+   
+  
+    <script src="virus.js"></script>
+    
+   
+
+</body>
+
+
+</html>

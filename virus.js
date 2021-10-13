@@ -10,12 +10,11 @@ let numRecovered = [];
 let casesdata = [];
 let totalRecovered = 0; 
 var deaths = 0;
+var totalInfected = 0; //total infections in the sim
+
 
 var isSocialDist = new Boolean(false);
 let start;
-
-let fontSize = (18);
-
 
 
 let totalInfectorsArr = [];
@@ -33,7 +32,24 @@ casesChart = new Chart(myChart,{
             borderColor: 'rgba(133, 31, 64, 1)',
             data: [],
             fill: true
-        }]
+        },
+      {
+        label: 'Recovered',
+        backgroundColor: 'rgba(128,128,128,0.2',
+        borderColor: 'rgba(128,128,128,1',
+        data: [],
+        fill: true,
+        hidden: true
+      },
+      {
+      label: 'Never Infected',
+        backgroundColor: 'rgba(0,128,0,0.2)',
+        borderColor: 'rgba(0,128,0,1)',
+        data: [],
+        fill: true,
+        hidden: true
+      }
+    ]
 
     },
     options: {
@@ -72,48 +88,33 @@ function centerCanvas(){
 
    
     textFont('Helvetica Medium')
-    updateChart(casesChart,currentCases);
-   
     
-
-    //create people
-    /*
-    for(let i = 0; i < population; i++){
-        popArray[i] = new person(random(height),random(height),i,'Healthy', strain)
-    }
-    */
-   resetSimulation();
+    resetSimulation();
     infect(3)
     start = Date.now();
    
   }
   function windowResized() {
-    
     centerCanvas();
-   //resizeCanvas(windowWidth/4,windowHeight/2);
-    resetSimulation();
+    //resetSimulation();
+
   }
  let interval = 2;
   function draw(){
     document.getElementById("output").innerHTML= rnaught;
       if(isSocialDist){
         background('white') 
-        background('rgba(133, 31, 64, 0.2)')
-        
-       // console.log("social dist is true")
+        //background('rgba(133, 31, 64, 0.2)')
+
       } else {
         background('white') 
-      //  console.log("social dist is false")
-      }
-   
-    
 
+      }
       display();
       heal();  
       setInterval(updateStats(), 0);
       textSize(18)
       showStats()
-
 
       //calculate R
       if((frameCount % (interval * 30) == 0)){
@@ -197,9 +198,6 @@ function centerCanvas(){
           if(distance < 3 && random(1,2)>1 && popArray[i].state == 'Healthy'){
            infect(popArray[i].id);
            idin.secondInfs+= 1
-           //console.log(idin + 'increased second infs')
-           //console.log(popArray[i].id+ 'got infected')
-        
           }
         }
       }
@@ -252,15 +250,11 @@ function updateStats(){
     }
 }
 
-function updateChart(chart,data,day){
- // chart.data.labels.push("Day " + (round((Date.now()-start)/1500)));
+function updateChart(chart,active, recovered, healthy){
  chart.data.labels.push("");
- chart.data.datasets.forEach((dataset) => {
-    dataset.data.push(data);
-    casesdata.push(currentCases);
-});
-//  myChart.data.datasets[0].data = arrCurrentCases;
- 
+ chart.data.datasets[0].data.push(active);
+ chart.data.datasets[1].data.push(recovered);
+ chart.data.datasets[2].data.push(healthy);
 chart.update();
 
 }
@@ -270,25 +264,17 @@ function resetChart(chart,data){
   chart.data.datasets.forEach((dataset) => {
     dataset.data = [];
  });
- //  myChart.data.datasets[0].data = arrCurrentCases;
+
  
  chart.update();
 }
 
 setInterval(function(){
-  updateChart(casesChart,currentCases);
+  updateChart(casesChart,currentCases, totalRecovered, population - currentCases - totalRecovered );
  // popArray.push(new person(random(500),random(height-100),popArray.length,'Healthy', strain));
   ;
   //population++;
 },500)
-/*
-setInterval(function(){
-  
-  popArray.push(new person(random(500),random(height-100),popArray.length,'Healthy', strain));
-  ;
-  population++;
-},1000)
-*/
 
 function resetSimulation(){
 
@@ -304,6 +290,7 @@ function resetSimulation(){
  numRecovered = [];
  totalRecovered = 0; 
 isSocialDist = false;
+totalInfected = 0
 resetChart(casesChart)
 
   for(let i = 0; i < population; i++){
@@ -321,8 +308,6 @@ function doSocialDist(){
   } else {
     isSocialDist = true;
   }
-
- console.log('Social distance is ' + isSocialDist);
 }
 
 function ligma(num){
@@ -352,10 +337,6 @@ function vax(){
 
 var rnaught;
 function showStats(){
- 
- // rnaught = 1000 * numTotalCases[numTotalCases.length-1] / (Date.now() - start) ;
-  //console.log ( numTotalCases[numTotalCases.length-1])
-  //currentCases - casesdata[casesdata.length-5] / infperiod
   var totalx = 0;
   var totaly = 0;
   var totalcounted = 0;
@@ -376,9 +357,6 @@ function showStats(){
   ellipse(avgx, avgy, (15+currentCases), ( 15+currentCases));
   fill(255,0,0)
  
-//console.log(casesdata)
-
-
 }
 
 function calcR (){
@@ -398,22 +376,12 @@ function calcR (){
       continue;
     }
   }
-  //rnaught = totalSecs / currentCases;
-
-  //console.log('There are ' + totalSecs + ' second infections and '+ totalInfectors + ' currently infected people. Rnaught = ' + rnaught)
-  //console.log(totalInfectorsArr)
-  //console.log(totalSecondInfs)
-  console.log(totalInfectorsArr.reduce(add,0))
-  console.log(rnaught)
-
   totalInfectorsArr.push(totalInfectors)
   totalSecondInfs.push(totalSecs)
 
 for(let i = 0 ; i < totalInfectorsArr.length; i++){
  rnaught = round(totalInfectorsArr.reduce(add,0) / numTotalCases[numTotalCases.length-1], 2);
 }
-
-
 }
 
 function add(accumulator, a) {
