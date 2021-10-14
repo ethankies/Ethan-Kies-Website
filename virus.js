@@ -27,7 +27,7 @@ casesChart = new Chart(myChart,{
     data: {
         labels: ['Time'],
         datasets: [{
-            label: 'Active Cases',
+            label: 'Infectious',
             backgroundColor: 'rgba(133, 31, 64, 0.2)',
             borderColor: 'rgba(133, 31, 64, 1)',
             data: [],
@@ -42,7 +42,7 @@ casesChart = new Chart(myChart,{
         hidden: true
       },
       {
-      label: 'Never Infected',
+      label: 'Susceptible',
         backgroundColor: 'rgba(0,128,0,0.2)',
         borderColor: 'rgba(0,128,0,1)',
         data: [],
