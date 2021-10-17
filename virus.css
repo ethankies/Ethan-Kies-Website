@@ -148,15 +148,15 @@ display: inline-block;
     margin-top: 3vh;
     margin-left: 14%;*/
     
-   margin-left: 14%;
-   margin-right: 14%;
+  margin: 14%;
+   
    border-bottom: 1px solid #494949;
    border-top: 1px solid #494949;
    margin-top: 15px;
    padding-top: 10px;
    padding-bottom: 0;
    margin-bottom: 0;
-   
+ 
     
 }
 #sketch{
@@ -183,22 +183,33 @@ display: inline-block;
    
   
   }
-  @media (max-width:960px) {canvas{
+  @media (max-width:700px) {
+      canvas{
     height: 200px !important;
      width: 200px !important;
-}} 
-
-@media (min-width:960px) {canvas{
-    height: 400px !important;
-     width: 400px !important;
-} } 
-#pright{
-    
-   
-    
-    
    
 }
+
+    #canContainer {
+       
+        width: 60%;
+        margin: 0 auto;
+        
+     }
+
+} 
+
+@media (min-width:960px) {
+    canvas{
+    height: 400px !important;
+     width: 400px !important;
+     }
+     #canContainer {
+        display: flex;
+        justify-content: center;
+     }
+ } 
+
 .circle {
     width:10px;
     height:10px;
