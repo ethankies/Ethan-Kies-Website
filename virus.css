@@ -1,8 +1,20 @@
 
+body {
+   
+    max-width: 1200px;
+	margin: 0 auto;
+}
+img {
+    width: 25%;
+  
+    float: left;
+    border-radius: 50%;
+}
 a {
    color: rgba(133, 31, 64, 0.6);
    text-align: left;
    text-decoration: none;
+   
 
 }
 a:hover{

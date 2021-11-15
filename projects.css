@@ -4,7 +4,7 @@ body {
     background-color: rgb(51,51,51);
 
     font-family: 'Exo', sans-serif;
-	
+	overflow: hidden;
 	
   }
 
