@@ -4,10 +4,18 @@ body {
     background-color: rgb(51,51,51);
 
     font-family: 'Exo', sans-serif;
-	overflow: hidden;
+	
 	
   }
-
+  body::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
 #content{
   max-width: 512px;
 	margin: 0 auto;
