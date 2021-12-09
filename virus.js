@@ -66,7 +66,14 @@ casesChart = new Chart(myChart,{
       layout: {
         padding: 0
     }
-    }
+    },
+    scales: {
+      y:{
+        display: true,
+        type: 'logarithmic',
+      }
+    
+    },
 });
 
 let resetSim;

@@ -1,11 +1,12 @@
 body {
    /* background-image: linear-gradient(to right, #642667 , #CE0058);
     background-color: rgb(255, 255, 255);rgb(39, 39, 39)*/
-    background-color: rgb(51,51,51);
-
-    font-family: 'Exo', sans-serif;
+    /* background-color: rgb(51,51,51); */
+	/* background-color: rgb(160,208,248); */
+	background-color: #F8DD74;
+    /* font-family: 'Exo', sans-serif; */
 	
-	
+	font-family: 'Epilogue', sans-serif;
   }
   body::-webkit-scrollbar {
 	display: none;
@@ -25,7 +26,7 @@ body {
 	overflow: auto;
 }
 a{
-  color: white;
+  color: black;
   margin-right: 10px;
   /*text-decoration: none;*/
 }
@@ -35,25 +36,35 @@ a:hover {
 .section{
   padding-bottom: 48px;
 	margin-bottom: 48px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	border-bottom: 6px dashed #d142c821;
 }
 h1 {
-	font-weight: 600;
-	font-size: 24px;
-	color: #FFFFFF;
+	font-weight: 800;
+	font-size: 48px;
+	color: #D142C7;
+	
 	margin-bottom: 12px;
 }
 h2 {
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 20px;
 	line-height: 24px;
-	color: rgba(255, 255, 255, 0.8);
+	color: black;
 	margin-bottom: 16px;
 }
+h3 {
+	margin-bottom: 16px;
+}
+a.code {
+	font-weight: 200;
+	color: #D142C7;
+
+}
+
 .link {
 	font-size: 16px;
 	line-height: 20px;
-	color: #fff;
+	color: rgb(0, 0, 0);
 	margin-right: 12px;
 }
 .links .link {
@@ -63,9 +74,9 @@ h2 {
 }
 
 h6 {
-	font-weight: 600;
+	font-weight: 200;
 	font-size: 14px;
-	color: rgba(255, 255, 255, 0.64);
+	color: black;
 	margin-bottom: 24px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -74,6 +85,8 @@ p {
 	font-size: 18px;
 	line-height: 24px;
 	color: rgba(255, 255, 255, 0.8);
+	color: black;
+	margin-bottom: 16px;
 }
 ul li {
 	margin-bottom: 32px;
@@ -99,8 +112,18 @@ html{
 	margin-bottom: 0;
 }
 ::selection {
-	background: #727272; /* WebKit/Blink Browsers */
+	background: #fcc900; /* WebKit/Blink Browsers */
   }
   ::-moz-selection {
-	background: #727272; /* Gecko Browsers */
+	background: #fcc900; /* Gecko Browsers */
   }
+  .material-icons.md-18 { font-size:20px;
+	display: inline-flex;
+    vertical-align: middle;
+}
+
+a#bit {
+	color: #D142C7 ;
+	margin: 0;
+	font-weight: 500;
+}

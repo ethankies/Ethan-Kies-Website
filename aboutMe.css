@@ -1,7 +1,7 @@
 
 
 
-body {
+html, body {
     
    
    /* background-image: url("/assets/bluegrad.jpg");
@@ -12,10 +12,19 @@ body {
     background-color: #cccccc;
      */
     margin: 0;
-    background-color: white;
-    background: #FBFBFD;
-    overflow: auto;
+    padding: 0;
+    
+    height: 3000px;
+    background: #F3DFC1;
+    background-image: url(assets/bluegrad.jpg);
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgb(24, 23, 22) 0%,rgb(32, 62, 100) 20%, rgb(155, 59, 150) 51%, rgb(202, 180, 201) 85%);
+    background-size: auto;
+   
+    background-repeat: no-repeat;
+    
    /*  background: #5979b4; */
+
 
   }
   @media (max-width:640px){
@@ -44,19 +53,21 @@ img {
   margin-left: 5%;
  filter:grayscale(1);
  z-index: 0;
+
   }
 
 h1{
   font-family: 'Crete Round', sans-serif;
-	font-size: 48px;
-	color: #34283C;
+	font-size: 68px;
+	color: white;
 	margin-bottom: 12px;
     /*text-shadow:lightskyblue 2px 2px;*/
     padding:0;
+    /* transform:skew(60deg, -30deg) scaleY(.66667); */
     
 }
 
-a{
+a {
   font-family: 'Arvo', serif;
   display: inline-block;
   
@@ -65,7 +76,7 @@ a{
   font-size: medium;
   margin: 0;
 
-  
+
  
   
 }
@@ -86,6 +97,7 @@ a{
   padding-bottom: 48px;
 	margin-bottom: 48px;
 	border-bottom: 1px solid rgba(111, 116, 138,0.25);
+ 
 }
 
 
@@ -94,7 +106,11 @@ a{
 	margin: 0 auto;
 	padding: 64px 24px;
   padding-top: 12px;
-  margin-top: 50px
+  margin-top: 50px;
+  z-index: 100;
+  position: relative;
+  
+  
 }
 h3{
   font-weight: 400;
@@ -110,4 +126,49 @@ h3{
 ::-moz-selection {
   background: #1a1a1a; /* Gecko Browsers */
   color: white;
+}
+
+/* Noise */
+.grain {
+  /* opacity: 0.7; */
+  mix-blend-mode: soft-light;
+  animation: grain 0.4s steps(1) infinite;
+  height: 3060px;
+  width: 100vw;
+  margin-top: -60px;
+  background-image: url("https://assets.codepen.io/14179/noise-256w.png");
+  position: absolute;
+  z-index: 0;
+}
+@keyframes grain {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  20% {
+    background-position: 50% 50%;
+  }
+  40% {
+    background-position: 25% 25%;
+  }
+  60% {
+    background-position: 75% 75%;
+  }
+  80% {
+    background-position: 0% 100%;
+  }
+}
+
+/*Scroll bar*/
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }

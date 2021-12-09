@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ethan Kies - Portfolio</title>
+  <title>Ethan Kies</title>
   
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Crete+Round&display=swap');
-      </style>
+      @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;800&display=swap');
+     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="projects.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
    <!-- <link rel = "icon" href = "assets/documentimages/EK.png" type = "image/x-icon">
    
   
@@ -30,7 +33,7 @@
 
 <body>
  <!--Navigation bar-->
- <div id="nav-placeholder" >
+ <!-- <div id="nav-placeholder" >
 
 </div>
 <script>
@@ -49,52 +52,32 @@ jQuery(function($){
       $(this).addClass('active')
     }
   });
-});
+}); -->
 </script>
 <!--end of Navigation bar-->
   <div id="content">
     <div class = "section">
-      <img src="assets/favicon.png" width=100px style="border-radius: 50%;  margin-bottom: 1%;filter:grayscale(.3);">
+      <!-- <img src="assets/favicon.png" width=100px style="border-radius: 50%;  margin-bottom: 1%;filter:grayscale(.3);"> -->
       <h1>Ethan Kies</h1>
-      <h2>BIT-Cyber student at Virginia Tech</h2>
+      <h2><a id="bit" href="https://bit.vt.edu/academics/undergraduate-programs/cyber.html" >BIT-Cyber</a> student @ Virginia Tech</h2>
+      <h3>Focused on responsive design and implementing best UX practices</h3>
       <a href="https://www.linkedin.com/in/ethan-kies/">LinkedIn &larr;</a>
       <a href="resume.pdf" target="_blank">
         Résumé &larr;</a>
         
     </div>
     <div class = "section">
-      <h6>Web Projects</h6>
+      <h6>Currently</h6>
       <ul>
         <li>
-          <h3><a href="Simulation-of-Viruses.html">Simulation of How Viruses Spread</a></h3>
-          <p>Visualize the exponential behavior of epidemics</p>
-        </li>
-        <li>
-          <h3><a href="https://ethankies.github.io/Hokie-Talk/" target="_blank">Hokie Talk Website</a></h3>
-          <p>Official website for Hokie Talk podcast</p> 
-        </li>
-        <li>
-          <h3><a href="https://chrome.google.com/webstore/detail/dark-mode-for-canvas/bfhfiehlfcbhooocpacdmflopmjgehhf?hl=en&authuser=0" target="_blank">Dark Mode For Canvas</a></h3>
-          <p>Chrome extension that changes Canvas to dark mode</p> 
-        </li>
-        <li>
-          <h3><a href="NYT-Article.html" target="_blank">Trendy New York Times Articles</a></h3>
-          <p>List of the most shared New York Time's articles of the past seven days</p>
-        </li>
-        
-        <li>
-          <h3><a>This Website</a></h3>
-          <p>Portfolio and pet project</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class = "section">
-      <h6>Graphic design & Video</h6>
-      <ul>
-        <li>
-          <h3><a href="https://linktr.ee/hokie_talk_" target="_blank">Hokie Talk</a></h3>
-          <p>Development of podcast in collaboration with two other students</p>
+          <h3><a href="https://hokietalk.com/" target="_blank">Hokie Talk</a></h3>
+          <p>Officer, graphic designer, and video editor</p>
+          <span><a href="https://ethankies.github.io/hokietalkportfolio/" target="blank" class="code">Graphic design <span class="material-icons  md-18">
+            brush
+            </span></a></span>
+            <span><a href="https://ethankies.github.io/hokietalkportfolio/" target="blank" class="code">Video <span class="material-icons  md-18">
+              fast_forward
+              </span></a></span>
        <!--  <img width="200" height="200"src="assets/projthumps/newEpisodeJustinHorn.jpg"> 
           <video width="200" height="200" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
               <source src="assets\animations\Square.mp4" type="video/mp4">
@@ -104,16 +87,50 @@ jQuery(function($){
       --->
       </ul>
     </div>
+    <div class = "section">
+      <h6>Web Projects</h6>
+      <ul>
+        <li>
+          <h3><a href="Simulation-of-Viruses.html">Simulation of How Viruses Spread</a></h3>
+          <p>Visualize the exponential behavior of epidemics</p>
+          <span><a href="https://github.com/ethankies/Ethan-Kies-Website/blob/master/virus.js" target="blank" class="code">See the code <span class="material-icons md-18">code</span></a></span>
+        
+             
+          </li>
+        <li>
+          <h3><a href="https://hokietalk.com/" target="_blank">Hokie Talk Website</a></h3>
+          <p>Official website for Hokie Talk podcast</p>
+          <span><a href="https://github.com/ethankies/Hokie-Talk" target="blank" class="code">See the code <span class="material-icons md-18">code</span></a></span>
+        </li>
+        <li>
+          <h3><a href="https://chrome.google.com/webstore/detail/dark-mode-for-canvas/bfhfiehlfcbhooocpacdmflopmjgehhf?hl=en&authuser=0" target="_blank">Dark Mode For Canvas</a></h3>
+          <p>Chrome extension that changes Canvas to dark mode</p>
+          <span><a href="https://github.com/ethankies/darkmodeforcanvas" target="blank" class="code">See the code <span class="material-icons md-18">code</span></a></span>
+        </li>
+        <li>
+          <h3><a href="NYT-Article.html" target="_blank">Trendy New York Times Articles</a></h3>
+          <p>List of the most shared New York Time's articles of the past seven days</p>
+          <span><a href="https://github.com/ethankies/NYT-articles" target="blank" class="code">See the code <span class="material-icons md-18">code</span></a></span>
+        </li>
+        
+        <li>
+          <h3><a>This Website</a></h3>
+          <p>Portfolio and pet project</p>
+          <span><a href="https://github.com/ethankies/Ethan-Kies-Website" target="blank" class="code">See the code <span class="material-icons md-18">code</span></a></span>
+
+        </li>
+      </ul>
+    </div>
+
+
     <div class = "section links">
       <a href="mailto:ethankies@vt.edu" class="link">Email</a>
       <a href="https://www.linkedin.com/in/ethan-kies/" class="link">LinkedIn</a>
       <a href="resume.pdf" class = "link"target="_blank">
         Résumé</a>
-      <a href = "https://github.com/ethankies?tab=repositories"class="link">Github</a>
+      <a href = "https://github.com/ethankies"class="link">Github</a>
       <a href="https://twitter.com/ethan_kies" class="link">Twitter</a>
-      
-      
-  
+
      
         
     </div>
