@@ -28,6 +28,7 @@ body {
 a{
   color: black;
   margin-right: 10px;
+ 
   /*text-decoration: none;*/
 }
 a:hover {
@@ -58,7 +59,7 @@ h3 {
 a.code {
 	font-weight: 200;
 	color: #D142C7;
-
+	
 }
 
 .link {
@@ -66,6 +67,7 @@ a.code {
 	line-height: 20px;
 	color: rgb(0, 0, 0);
 	margin-right: 12px;
+	
 }
 .links .link {
 	margin-right: 0;
