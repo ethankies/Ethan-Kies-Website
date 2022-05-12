@@ -1,6 +1,8 @@
+
 .main-div {
+	
 	width: 500px;
-	height: 500px;
+	height: 400px;
 	padding: 60px 35px 35px 35px;
 
 	border-radius: 40px;
@@ -11,9 +13,10 @@
 	border-radius: 58px;
 
 	background: #e0e0e0;
-box-shadow:  -25px 25px 50px #bebebe,
-             25px -25px 50px #ffffff;
-
+	background: linear-gradient(rgba(255, 255, 255, 0.99), rgba(231, 231, 231, 0.7)), url("assets/landingPage/cartographer.png");
+	box-shadow:  -50px 25px 50px #bebebe,
+             5px -25px 50px #ffffff;
+			
 	
 	
 			}
@@ -42,7 +45,7 @@ h1 {
 }
 
 h2 {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 p {
@@ -50,25 +53,31 @@ p {
 	line-height: 27px;
 }
 button {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 120px;
 	text-align: center;
-	margin-right: 24px;
+	margin: 5px; 
+
 	background: #efefef;
 	border: none;
 	border-radius: 25px;
 	color: #444;
-	font-size: 1rem;
-	font-weight: 700;
+	font-size: 1.1rem;
+	font-weight: 1000;
 	/* letter-spacing: .2rem; */
 	text-align: center;
 	outline: none;
 	cursor: pointer;
 	transition: .2s ease-in-out;
-	box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+	/* box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
 				-6px -6px 10px rgba(255, 255, 255, .5),
 				6px 6px 8px rgba(255, 255, 255, .075),
-				6px 6px 10px rgba(0, 0, 0, .15);
+				6px 6px 10px rgba(0, 0, 0, .15); */
+				box-shadow:  -5px 5px 10px #bebebe8f,
+             5px -5px 10px #ffffff83;
+			 padding: 5px;
+
+
   }
   button:hover {
 	box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
@@ -81,19 +90,21 @@ button {
 				inset -2px -2px 4px rgba(255, 255, 255, .5),
 				inset 2px 2px 2px rgba(255, 255, 255, .075),
 				inset 2px 2px 4px rgba(0, 0, 0, .15);
-  
 	
 			}
 
 .tab {
 	margin-top: 42px;
-	margin-bottom: 42px;
+	margin-bottom: 42px; 
+
 }
 
 .dark-mode {
 	background-color:#3d3d3d;
 }
 
-.switch {
-	
+ 
+
+a {
+	text-decoration: none;
 }
