@@ -108,3 +108,28 @@ button {
 a {
 	text-decoration: none;
 }
+
+@media screen and (min-width: 601px) {
+    .main-div {
+	
+		width: 500px;
+		height: 400px;
+		padding: 60px 35px 35px 35px;
+  }
+}
+
+  @media screen and (max-width: 600px) {
+	.main-div {
+	
+		width: 320px;
+		height: 300px;
+		padding: 60px 35px 35px 35px;
+  }
+  .tab {
+	  margin-top: 0;
+  }
+  button {
+	  margin: 0;
+	  margin-right: 3px;
+  }
+  }
