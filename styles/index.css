@@ -13,7 +13,7 @@
 	border-radius: 58px;
 
 	background: #e0e0e0;
-	background: linear-gradient(rgba(255, 255, 255, 0.99), rgba(231, 231, 231, 0.7)), url("assets/landingPage/cartographer.png");
+	background: url("\assets\cartographer.png"), linear-gradient(rgba(255, 255, 255, 0.6), rgba(231, 231, 231, 0.7));
 	box-shadow:  -50px 25px 50px #bebebe,
              5px -25px 50px #ffffff;
 			
@@ -42,12 +42,18 @@ body {
 
 h1 {
 	font-weight: 900;
+	margin-bottom: 0;
 }
 
 h2 {
 	font-weight: 600;
+	margin-top: 12px;
 }
-
+h3 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-weight: 300;
+}
 p {
 	font-weight: 500;
 	line-height: 27px;
