@@ -7,7 +7,7 @@
 
 #header {
   /* box-shadow: 0 2px 4px rgba(0,0,0,0.04); */
-  background-color: #efefef;
+  
   cursor: default;
   margin: 0px;
   display: block;
@@ -18,7 +18,8 @@
   bottom: 0;
   /* text-align: center; */
  
-	background: rgba(255, 255, 255, 0.99);
+	background: rgba(255, 255, 255, 1);
+
   box-shadow:  -5px 5px 10px #bebebe,
              1px -5px 10px #ffffff;
 
@@ -123,6 +124,9 @@ head {
       border-radius:0px;
     
     }
+    #content {
+      background: rgba(255, 255, 255, 1);
+    }
     .container {
       margin: 0;
       margin-top: 64px;
@@ -131,29 +135,7 @@ head {
     .grid-item {
       margin-bottom: 0px;
     }
-
-    #header {
-      /* position: absolute; */
-    }
   }
-
-  .material-symbols-outlined {
-    /* position: fixed;
-    display: block;
-   line-height: 64px;
-  */
-    /* text-decoration: none;
-  margin-top: 16px;
-  margin-left: 10px;
-  position:absolute;
-  top:0;
-  box-shadow:  -50px 25px 50px #bebebe,
-               5px -25px 50px #ffffff; */
-  }
-
-
-
-
   button {
     position: fixed;
     margin-top: 13px;
