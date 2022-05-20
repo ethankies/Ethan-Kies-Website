@@ -17,7 +17,7 @@
   top: 0;
   bottom: 0;
   /* text-align: center; */
-  background: #e0e0e0;
+ 
 	background: rgba(255, 255, 255, 0.99);
   box-shadow:  -5px 5px 10px #bebebe,
              1px -5px 10px #ffffff;
@@ -58,7 +58,7 @@
 
 h1 {
     text-align: center;   
-    font-weight: 500;
+    font-weight: 600;
     color: #3d3d3d;
     font-size: 18px;
     line-height: 64px;
@@ -78,7 +78,7 @@ p {
   margin-right: 10%;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #5e5d5d;
+  color: #969696;
 }
 
 .image > img {
@@ -112,7 +112,9 @@ head {
     background: linear-gradient(rgba(255, 255, 255, 0.99), rgba(231, 231, 231, 0.7));
     box-shadow:  -50px 25px 50px #bebebe,
                5px -25px 50px #ffffff;
-        
+               -webkit-transition: transform 0.5s ease-in-out;
+               -moz-transition: transform 0.5s ease-in-out;
+               transition: transform 0.5s ease-in-out;
     }
   }
 
@@ -123,10 +125,15 @@ head {
     }
     .container {
       margin: 0;
-      margin-top: auto;
+      margin-top: 64px;
+      background: rgba(255, 255, 255, 0.99);
     }
     .grid-item {
       margin-bottom: 0px;
+    }
+
+    #header {
+      /* position: absolute; */
     }
   }
 
@@ -191,3 +198,15 @@ head {
             inset 2px 2px 4px rgba(0, 0, 0, .15);
       
           }
+
+          .grid-item:hover {
+            /* transform: scale(1.01) ; 
+            -webkit-transition: transform .5s ease-in-out;
+            transition: all .5s ease-in-out; */
+            -moz-transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+            -o-transform: scale(1.02);
+            -ms-transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+            }
