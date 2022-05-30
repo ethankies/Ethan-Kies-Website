@@ -40,6 +40,10 @@
   grid-row-gap: 20px; */
 
   }
+
+  body, .container {
+    background: #D1D9E6;
+  }
   #content {
  
     display: flex;
@@ -93,9 +97,7 @@ p {
  
   }
 
-body, .container {
-  background: #D1D9E6;
-}
+
 
 body {
   margin: 0px;
@@ -135,6 +137,10 @@ head {
       margin: 0;
       margin-top: 00px;
       background: rgba(255, 255, 255, 0.99);
+    }
+
+    body, .container {
+      background: #ffffff;
     }
     .grid-item {
       margin-bottom: 0px;
