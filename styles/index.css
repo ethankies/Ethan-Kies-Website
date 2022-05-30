@@ -13,13 +13,17 @@
 	border-radius: 58px;
 
 	background: #e0e0e0;
-	background: url("\assets\cartographer.png"), linear-gradient(rgba(255, 255, 255, 0.6), rgba(231, 231, 231, 0.7));
+	/* background-image: url("/assets/cartographer.png");  */
+	background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(231, 231, 231, 0.75) ), url("/assets/cartographer.png");
 	box-shadow:  -50px 25px 50px #bebebe,
              5px -25px 50px #ffffff;
 			
 	
-	
+		
+		
 			}
+
+	
 
 .content {
 	display: block;
