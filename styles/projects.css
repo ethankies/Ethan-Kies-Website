@@ -123,7 +123,7 @@ head {
   @media screen and (max-width: 600px) {
     .grid-item {
       border-radius:0px;
-    
+      box-shadow: #ffffff;
     }
    
     #content {
