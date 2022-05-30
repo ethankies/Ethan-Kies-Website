@@ -25,7 +25,7 @@
 
   z-index: 2;
   backdrop-filter: blur(50px);
- 
+  -webkit-backdrop-filter: blur(50px);
 }
 .container {
     margin: 20px auto;
@@ -127,7 +127,8 @@ head {
     }
    
     #content {
-      background: rgba(255, 255, 255, 1);
+      background: white;
+      background-color: white;
       padding: 64px;
     }
     .container {
