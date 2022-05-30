@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,900&display=swap');
+
+
+
+.text {
+  margin-left: 10px;
+  background: #e0e0e0;
+  background: white;
+background-image: linear-gradient(rgba(255, 255, 255, 0.75) 20%, rgba(231, 231, 231, 0.9) 80%), url("/assets/cartographer.png");
+box-shadow:  -20px 25px 50px #bebebe,
+5px -15px 50px #ffffff;
+border-radius: 12px;
+height: 200px;
+width: 200px;
+font-family: 'Nunito Sans', sans-serif;
+padding: 60px 350px 35px 35px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(61, 61, 61) !important; 
+}
+a:visited {
+    color:black;
+}
+
+.content {
+
+  
+  position: absolute;
+	left: 50%;
+	top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  
+}
+
+h1 {
+  margin-top: 0px;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+
+.topDiv {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  /* margin: 0; */
+ 
+
+  border-bottom: rgba(0, 0, 0, 0.295) solid 2px;
+}
+
+#back {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background: #D1D9E6;
+}
+
+@media (max-width: 480px) {
+  .content {
+    top: 50%; /* IMPORTANT */
+        left: 50%; /* IMPORTANT */
+        display: block;
+        position: absolute;
+     
+
+  }
+  .text {
+    padding: 60px 175px 35px 35px;
+    width: 100px;
+    height: 200px;
+    margin-left: 0px;
+  }
+  .topDiv {
+    width: 250px;
+  }
+}
+
+
