@@ -20,7 +20,7 @@ padding: 30px 350px 35px 30px;
 a {
     text-decoration: none;
     color: black;
-  
+
 }
 
 a:hover {
@@ -67,6 +67,10 @@ h1 {
   
 }
 
+p {
+  margin-bottom:  0px;
+  margin-top: 12px;
+}
 body {
   background: #D1D9E6;
 }
