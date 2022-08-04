@@ -143,16 +143,16 @@ a {
 		padding: 60px 35px 35px 35px;
   }
   .tab {
-	  margin-top: 12px;
-	  padding-top: 0px;
+	  /* margin-top: 12px; */
+	  /* padding-top: 0px; */
   }
   h2 {
 	  margin-bottom: 10px;
   }
   button {
 	  /* margin: 0; */
-	  margin-right: 3px;
+	  /* margin-right: 3px; */
 	  /* margin-top: 10px; */
-	  width: 45%;
+	  /* width: 45%; */
   }
   }
