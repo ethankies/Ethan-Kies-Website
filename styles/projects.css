@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
 * {
   font-family: 'Nunito Sans', helvetica;
   margin: 0px;
@@ -222,3 +223,17 @@ head {
             transform: scale(1.02);
             }
 
+.text {
+  text-align: left;
+  font: 204px;
+
+}
+
+a{ 
+  color: #3d3d3d;
+  text-decoration: none;
+  font-size:  16px;
+}
+a:visited {
+  text-decoration: none;
+}
